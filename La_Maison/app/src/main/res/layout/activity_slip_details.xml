@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F172A"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:layout_marginTop="15dp">
+
+            <ImageView
+                android:id="@+id/btnBackToInbox"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_chevron_left"
+                android:paddingVertical="8dp"
+                android:paddingHorizontal="5dp"
+                android:background="@drawable/bg_input_rounded"
+                android:backgroundTint="#1E293B"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="La Maison"
+                android:fontFamily="@font/parisienne"
+                android:textSize="26sp"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PAYMENT VERIFICATION"
+            android:fontFamily="@font/playfair_display"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="#38BDF8"
+            android:letterSpacing="0.15"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Slip Details"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_sheet_light_grey"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_white"
+                android:elevation="3dp"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="#F8FAFC"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="16dp">
+                    <ImageView
+                        android:id="@+id/ivReceiptImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:scaleType="centerCrop" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E2E8F0"
+                    android:layout_marginBottom="20dp" />
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Tenant" android:textColor="#64748B" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvDetailTenant" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Loading..." android:textColor="#0F172A" android:textStyle="bold" android:textSize="13sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Suite" android:textColor="#64748B" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvDetailSuite" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Loading..." android:textColor="#0F172A" android:textStyle="bold" android:textSize="13sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Amount Paid" android:textColor="#64748B" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvDetailAmount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$0.00" android:textColor="#047857" android:textStyle="bold" android:textSize="14sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Transfer Date" android:textColor="#64748B" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvDetailDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Loading..." android:textColor="#0F172A" android:textStyle="bold" android:textSize="13sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Bank" android:textColor="#64748B" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvDetailBank" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Loading..." android:textColor="#0F172A" android:textStyle="bold" android:textSize="13sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Bank Address" android:textColor="#64748B" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvDetailBankAddress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Loading..." android:textColor="#0F172A" android:textStyle="bold" android:textSize="13sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Reference No." android:textColor="#64748B" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvDetailRef" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Loading..." android:textColor="#0F172A" android:textStyle="bold" android:textSize="13sp" android:fontFamily="monospace"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llAuditInfoSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_card_white"
+                android:elevation="2dp"
+                android:padding="20dp"
+                android:layout_marginTop="20dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AUDIT DETAILS"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="#64748B"
+                    android:layout_marginBottom="16dp"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp" android:gravity="center_vertical">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Status" android:textColor="#64748B" android:textSize="13sp"/>
+                    <TextView
+                        android:id="@+id/tvAuditDetailStatusBadge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VERIFIED"
+                        android:textColor="#16A34A"
+                        android:textStyle="bold"
+                        android:textSize="11sp"
+                        android:background="#DCFCE7"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Processed By" android:textColor="#64748B" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvAuditDetailManager" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Loading..." android:textColor="#0F172A" android:textStyle="bold" android:textSize="13sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Approval Date" android:textColor="#64748B" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvAuditDetailDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Loading..." android:textColor="#0F172A" android:textStyle="bold" android:textSize="13sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llActionButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="24dp"
+                android:weightSum="2">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnVerifySettle"
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_weight="1"
+                    android:text="Verify &amp; Settle"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    app:backgroundTint="#0F172A"
+                    app:cornerRadius="12dp"
+                    android:layout_marginEnd="8dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRejectSlip"
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_weight="1"
+                    android:text="Reject Slip"
+                    android:textAllCaps="false"
+                    android:textColor="#DC2626"
+                    app:backgroundTint="#FFFFFF"
+                    app:strokeColor="#DC2626"
+                    app:strokeWidth="1dp"
+                    app:cornerRadius="12dp"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

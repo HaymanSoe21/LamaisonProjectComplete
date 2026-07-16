@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F172A"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:layout_marginTop="15dp">
+
+            <ImageView
+                android:id="@+id/btnBackArrow"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_chevron_left"
+                android:paddingVertical="8dp"
+                android:paddingHorizontal="5dp"
+                android:background="@drawable/bg_input_rounded"
+                android:backgroundTint="#1E293B"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="La Maison"
+                android:fontFamily="@font/parisienne"
+                android:textSize="26sp"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OFFICIAL RECEIPT"
+            android:fontFamily="@font/playfair_display"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="#38BDF8"
+            android:letterSpacing="0.15"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transaction Details"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_sheet_light_grey"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_white"
+                android:elevation="3dp"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:text="✓"
+                    android:textColor="#047857"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/bg_input_rounded"
+                    android:backgroundTint="#D1FAE5" />
+
+                <TextView
+                    android:id="@+id/tvDetailAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-$1,500.00"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="#0F172A"
+                    android:layout_marginTop="12dp" />
+
+                <TextView
+                    android:id="@+id/tvDetailStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Paid"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="#047857"
+                    android:background="#D1FAE5"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="4dp"
+                    android:layout_marginTop="6dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E2E8F0"
+                    android:layout_marginVertical="20dp" />
+
+                <!-- ADJUSTED: Added Payment Category Row -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Category" android:textColor="#64748B" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvDetailCategory" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Monthly Rent Payment" android:textColor="#0F172A" android:textStyle="bold" android:textSize="13sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Transaction ID" android:textColor="#64748B" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvDetailTxnId" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TXN-73523948" android:textColor="#0F172A" android:textStyle="bold" android:textSize="13sp" android:fontFamily="monospace"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Date" android:textColor="#64748B" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvDetailDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aug 01, 2026" android:textColor="#0F172A" android:textStyle="bold" android:textSize="13sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Payment Method" android:textColor="#64748B" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvDetailMethod" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bank Transfer" android:textColor="#0F172A" android:textStyle="bold" android:textSize="13sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Bank Name" android:textColor="#64748B" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvDetailBankName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="KBZ Bank" android:textColor="#0F172A" android:textStyle="bold" android:textSize="13sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Bank Address" android:textColor="#64748B" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvDetailBankAddress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mandalay Branch 78st" android:textColor="#0F172A" android:textStyle="bold" android:textSize="13sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Notes" android:textColor="#64748B" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvDetailNotes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Monthly rent payment." android:textColor="#0F172A" android:textStyle="bold" android:textSize="13sp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnBackToLedger"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Back to Ledger"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#475569"
+                app:backgroundTint="#F8FAFC"
+                app:strokeColor="#CBD5E1"
+                app:strokeWidth="1dp"
+                app:cornerRadius="12dp"
+                android:layout_marginTop="24dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F172A"
+    android:orientation="vertical">
+
+    <!-- 1. FIXED NAVY HEADER (Does not scroll, Centered Heading) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="24dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/btnBackArrow"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_chevron_left"
+                android:padding="6dp"
+                android:background="@drawable/bg_input_rounded"
+                android:backgroundTint="#1E293B"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="La Maison"
+                android:fontFamily="@font/parisienne"
+                android:textSize="28sp"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TENANT PORTAL"
+            android:fontFamily="@font/playfair_display"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="#38BDF8"
+            android:letterSpacing="0.15"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tvHeaderTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Financial Ledger"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <!-- 2. SCROLLABLE BODY AREA -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_sheet_light_grey"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Outstanding Due Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_input_rounded"
+                android:backgroundTint="#1E293B"
+                android:elevation="4dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="20dp"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Outstanding Due"
+                        android:textColor="#94A3B8"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tvOutstandingAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$0.00"
+                        android:textColor="#FFFFFF"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="2dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvNextDueDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Next Due: Loading..."
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="#F59E0B"
+                    android:background="#33F59E0B"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="6dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FILTER TRANSACTIONS BY DATE"
+                android:textSize="11sp"
+                android:textColor="#64748B"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Date Search & Clear Filter Card -->
+            <!-- FILTER TRANSACTIONS CARD -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_white"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="24dp">
+
+                <!-- Date Inputs Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp"
+                    android:weightSum="2">
+
+                    <!-- Start Date Box -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_input_rounded"
+                        android:backgroundTint="#F8FAFC"
+                        android:padding="10dp"
+                        android:layout_marginEnd="6dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Start Date"
+                            android:textColor="#64748B"
+                            android:textSize="11sp"/>
+                        <EditText
+                            android:id="@+id/etFromDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:hint="Select Date"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="#0F172A"
+                            android:textColorHint="#94A3B8"
+                            android:drawableEnd="@android:drawable/ic_menu_today"
+                            android:drawableTint="#64748B"
+                            android:focusable="false"
+                            android:clickable="true"
+                            android:paddingTop="4dp"/>
+                    </LinearLayout>
+
+                    <!-- End Date Box -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_input_rounded"
+                        android:backgroundTint="#F8FAFC"
+                        android:padding="10dp"
+                        android:layout_marginStart="6dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="End Date"
+                            android:textColor="#64748B"
+                            android:textSize="11sp"/>
+                        <EditText
+                            android:id="@+id/etToDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:hint="Select Date"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="#0F172A"
+                            android:textColorHint="#94A3B8"
+                            android:drawableEnd="@android:drawable/ic_menu_today"
+                            android:drawableTint="#64748B"
+                            android:focusable="false"
+                            android:clickable="true"
+                            android:paddingTop="4dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- DUAL BUTTON ROW: SEARCH & CLEAR -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <!-- Dark Navy Search Button -->
+                    <Button
+                        android:id="@+id/btnSearchTransactions"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:text="Search Records"
+                        android:textAllCaps="false"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        app:cornerRadius="10dp"
+                        app:backgroundTint="#0F172A"
+                        android:layout_marginEnd="6dp" />
+
+                    <!-- Light Grey Clear Filter Button -->
+                    <Button
+                        android:id="@+id/btnClearFilter"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:text="Clear Filter"
+                        android:textAllCaps="false"
+                        android:textStyle="bold"
+                        android:textColor="#0F172A"
+                        app:cornerRadius="10dp"
+                        app:backgroundTint="#E2E8F0"
+                        android:layout_marginStart="6dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PAYMENT HISTORY"
+                android:textSize="11sp"
+                android:textColor="#64748B"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp" />
+
+            <!-- Transaction List -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTransactions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                android:clipToPadding="false"
+                android:paddingBottom="16dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

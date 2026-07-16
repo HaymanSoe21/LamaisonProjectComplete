@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_maint_inbox"
+        android:icon="@android:drawable/ic_dialog_email"
+        android:title="Inbox" />
+    <item
+        android:id="@+id/nav_maint_log"
+        android:icon="@android:drawable/ic_menu_today"
+        android:title="Maintenance Log" />
+</menu>

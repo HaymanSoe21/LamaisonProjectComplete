@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card_white"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center">
+
+    <!-- Standardized Checkmark Icon -->
+    <TextView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:text="✓"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#047857"
+        android:gravity="center"
+        android:background="@drawable/bg_input_rounded"
+        android:backgroundTint="#D1FAE5"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ticket Submitted"
+        android:textColor="#0F172A"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Message -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your maintenance request has been logged successfully. A property manager will review the ticket shortly."
+        android:textColor="#64748B"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Dynamic Ticket Detail Box -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_input_rounded"
+        android:backgroundTint="#F8FAFC"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_marginBottom="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tvTicketCategory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CATEGORY: GENERAL"
+                android:textColor="#64748B"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.05" />
+
+            <!-- Status Pill Badge -->
+            <TextView
+                android:id="@+id/tvTicketStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="• PENDING"
+                android:textColor="#D97706"
+                android:background="#FEF3C7"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:textStyle="bold"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTicketTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Loading Issue Title..."
+            android:textColor="#0F172A"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginTop="2dp" />
+    </LinearLayout>
+
+    <!-- Action Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBackHome"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text="Back to Dashboard"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#334155"
+        app:cornerRadius="10dp" />
+
+</LinearLayout>

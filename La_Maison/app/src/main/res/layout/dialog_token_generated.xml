@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card_white"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center">
+
+    <!-- Luxury Brand Header Icon -->
+    <TextView
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:text="LM"
+        android:fontFamily="@font/parisienne"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:background="@drawable/bg_input_rounded"
+        android:backgroundTint="#0F172A"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Token Generated"
+        android:fontFamily="@font/playfair_display"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#0F172A"
+        android:gravity="center" />
+
+    <!-- Emphasized Data Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_input_rounded"
+        android:backgroundTint="#F8FAFC"
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/tvDialogManagerId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Manager: LM-MGR-XX"
+            android:textSize="13sp"
+            android:textColor="#64748B"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="6dp"/>
+
+        <TextView
+            android:id="@+id/tvDialogToken"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Token: LM-MGR-XXXXXXXX"
+            android:textSize="15sp"
+            android:textColor="#0F172A"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textIsSelectable="true" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please copy the token above and provide it to the new property manager."
+        android:textSize="13sp"
+        android:textColor="#64748B"
+        android:gravity="center"
+        android:lineSpacingExtra="3dp"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Action Pill Button -->
+    <Button
+        android:id="@+id/btnDialogDone"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Done"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#0F172A"
+        app:cornerRadius="12dp"
+        android:elevation="2dp" />
+
+</LinearLayout>

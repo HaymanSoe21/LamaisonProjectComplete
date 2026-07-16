@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card_white"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:text="📞"
+        android:textSize="24sp"
+        android:textColor="#0F172A"
+        android:gravity="center"
+        android:background="@drawable/bg_input_rounded"
+        android:backgroundTint="#F1F5F9"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/tvDialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact"
+        android:fontFamily="@font/playfair_display"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#0F172A"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/tvDialogSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How would you like to reach them?"
+        android:textSize="13sp"
+        android:textColor="#64748B"
+        android:gravity="center"
+        android:lineSpacingExtra="3dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/btnEmailContact"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="✉️  Send Email"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#0F172A"
+        app:backgroundTint="#F8FAFC"
+        app:strokeColor="#CBD5E1"
+        app:strokeWidth="1dp"
+        app:cornerRadius="12dp"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnCallContact"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="📞  Make Call"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#0F172A"
+        app:cornerRadius="12dp" />
+
+</LinearLayout>

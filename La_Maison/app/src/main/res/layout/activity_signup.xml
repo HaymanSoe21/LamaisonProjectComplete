@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F172A"
+    android:orientation="vertical">
+
+    <!-- 1. FIXED NAVY HEADER (Pinned to top, centered text) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="36dp"
+        android:paddingBottom="24dp">
+
+        <TextView
+            android:id="@+id/tvAppTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="La Maison"
+            android:textSize="38sp"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:fontFamily="@font/parisienne" />
+
+        <TextView
+            android:id="@+id/tvScreenTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:fontFamily="@font/playfair_display"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+    <!-- 2. SCROLLABLE FORM AREA (White Bottom Sheet) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_bottom_sheet_white"
+        android:orientation="vertical">
+
+        <!-- Only the input fields inside this ScrollView will scroll -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="28dp">
+
+                <EditText android:id="@+id/etFullName" android:textColor="#0F172A" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Full Name" android:background="@drawable/bg_input_rounded" android:paddingHorizontal="16dp" android:textSize="14sp" android:layout_marginBottom="12dp"/>
+
+                <EditText android:id="@+id/etUsername" android:textColor="#0F172A" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Username (e.g. johndoe)" android:background="@drawable/bg_input_rounded" android:paddingHorizontal="16dp" android:textSize="14sp" android:layout_marginBottom="12dp"/>
+
+                <EditText android:id="@+id/etGmail" android:textColor="#0F172A" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Gmail" android:inputType="textEmailAddress" android:background="@drawable/bg_input_rounded" android:paddingHorizontal="16dp" android:textSize="14sp" android:layout_marginBottom="12dp"/>
+
+                <EditText android:id="@+id/etPhone" android:textColor="#0F172A" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Phone (09... or +959...)" android:inputType="phone" android:background="@drawable/bg_input_rounded" android:paddingHorizontal="16dp" android:textSize="14sp" android:layout_marginBottom="12dp"/>
+
+                <EditText android:id="@+id/etPassword" android:textColor="#0F172A" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Password" android:inputType="textPassword" android:background="@drawable/bg_input_rounded" android:paddingHorizontal="16dp" android:textSize="14sp" android:layout_marginBottom="16dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ACCOUNT TYPE" android:textSize="11sp" android:textStyle="bold" android:textColor="#6B7280" android:layout_marginBottom="6dp"/>
+
+                <Spinner
+                    android:id="@+id/spRole"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bg_input_rounded"
+                    android:paddingHorizontal="12dp"
+                    android:layout_marginBottom="12dp" />
+
+                <EditText
+                    android:id="@+id/etSecretCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Secret Code (Required for Staff)"
+                    android:textColor="#0F172A"
+                    android:inputType="textVisiblePassword"
+                    android:background="@drawable/bg_input_rounded"
+                    android:paddingHorizontal="16dp"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CITIZENSHIP" android:textSize="11sp" android:textStyle="bold" android:textColor="#6B7280" android:layout_marginBottom="6dp"/>
+
+                <RadioGroup
+                    android:id="@+id/rgCitizenship"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+                    <RadioButton android:id="@+id/rbMyanmar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Myanmar" android:checked="true" android:buttonTint="#0F172A"/>
+                    <RadioButton android:id="@+id/rbForeigner" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Foreigner" android:layout_marginStart="24dp" android:buttonTint="#0F172A"/>
+                </RadioGroup>
+
+                <LinearLayout
+                    android:id="@+id/llMyanmarSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="NATIONAL ID / NRC NUMBER" android:textSize="11sp" android:textStyle="bold" android:textColor="#6B7280" android:layout_marginBottom="6dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp">
+
+                        <Spinner android:id="@+id/spNrcRegion" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1.2" android:background="@drawable/bg_input_rounded" android:layout_marginEnd="4dp"/>
+                        <Spinner android:id="@+id/spNrcTownship" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1.6" android:background="@drawable/bg_input_rounded" android:layout_marginEnd="4dp"/>
+                        <Spinner android:id="@+id/spNrcType" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1.2" android:background="@drawable/bg_input_rounded" android:layout_marginEnd="4dp"/>
+                        <EditText android:id="@+id/etNrcNumber" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="2.2" android:hint="123456" android:inputType="number" android:background="@drawable/bg_input_rounded" android:paddingHorizontal="10dp" android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="UPLOAD NRC (FRONT AND BACK)" android:textSize="11sp" android:textStyle="bold" android:textColor="#6B7280" android:layout_marginBottom="6dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="20dp">
+
+                        <TextView android:id="@+id/btnUploadNrcFront" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/bg_upload_zone" android:text="📁 Upload Front" android:gravity="center" android:textColor="#475569" android:layout_marginEnd="8dp"/>
+                        <TextView android:id="@+id/btnUploadNrcBack" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/bg_upload_zone" android:text="📁 Upload Back" android:gravity="center" android:textColor="#475569" android:layout_marginStart="8dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llForeignerSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PASSPORT DETAILS" android:textSize="11sp" android:textStyle="bold" android:textColor="#6B7280" android:layout_marginBottom="6dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp">
+
+                        <Spinner android:id="@+id/spForeignerDocType" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1.5" android:background="@drawable/bg_input_rounded" android:layout_marginEnd="8dp"/>
+                        <EditText android:id="@+id/etPassportNumber" android:textColor="#0F172A" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="2.5" android:hint="Passport Number" android:background="@drawable/bg_input_rounded" android:paddingHorizontal="16dp" android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="UPLOAD PASSPORT PHOTO PAGE" android:textSize="11sp" android:textStyle="bold" android:textColor="#6B7280" android:layout_marginBottom="6dp"/>
+
+                    <TextView
+                        android:id="@+id/btnUploadPassport"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/bg_upload_zone"
+                        android:text="📁 Tap to Upload Passport"
+                        android:gravity="center"
+                        android:textColor="#475569"
+                        android:layout_marginBottom="20dp" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/btnSignup"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:text="Sign Up"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    app:backgroundTint="#0F172A"
+                    app:cornerRadius="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Already have an account? "
+                        android:textColor="#6B7280"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvLoginAction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Log in"
+                        android:textColor="@color/selector_text"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:clickable="true"
+                        android:focusable="true" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

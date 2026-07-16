@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.LaMaison" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="colorPrimary">#0F172A</item>
+        <item name="colorSecondary">#FFB6C1</item>
+
+        <item name="android:statusBarColor">#0F172A</item>
+
+        <item name="android:windowLightStatusBar">false</item>
+        <!-- Hides the default Android 12 system splash screen icon -->
+        <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="31">@android:color/transparent</item>
+
+        <!-- Matches the system splash background to your custom splash background -->
+        <item name="android:windowSplashScreenBackground" tools:targetApi="31">#0F172A</item>
+
+    </style>
+
+    <style name="CustomMaterialCalendarTheme" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="colorPrimary">#0F172A</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorPrimaryVariant">#2563EB</item>
+        <item name="colorSurface">#FFFFFF</item>
+        <item name="colorOnSurface">#0F172A</item>
+        <item name="colorSecondary">#2563EB</item>
+    </style>
+
+    <style name="Theme.LaMaison" parent="Base.Theme.LaMaison" />
+</resources>

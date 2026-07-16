@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F172A">
+
+    <LinearLayout
+        android:id="@+id/headerSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="36dp"
+        android:paddingBottom="24dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="La Maison"
+                android:fontFamily="@font/parisienne"
+                android:textSize="28sp"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/btnSignOutAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="SIGN OUT"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/bg_btn_signout"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IT &amp; SECURITY GOVERNANCE PORTAL"
+            android:fontFamily="@font/playfair_display"
+            android:textSize="11sp"
+            android:textColor="#38BDF8"
+            android:textStyle="bold"
+            android:letterSpacing="0.1" />
+
+        <TextView
+            android:id="@+id/tvAdminName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/playfair_display"
+            android:text="Welcome, Systems Admin"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:background="@drawable/bg_sheet_light_grey"
+        app:layout_constraintTop_toBottomOf="@id/headerSection"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation_admin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SYSTEM HEALTH &amp; DIAGNOSTIC COUNTERS"
+                android:textSize="11sp"
+                android:textColor="#64748B"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"
+                android:layout_marginBottom="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card_white"
+                    android:elevation="2dp"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="5dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Active Staff" android:textColor="#64748B" android:textSize="11sp" android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/tvActiveStaffCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#2563EB"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Manager Tokens" android:textColor="#94A3B8" android:textSize="10sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card_white"
+                    android:elevation="2dp"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginBottom="5dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="System Anomalies" android:textColor="#64748B" android:textSize="11sp" android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/tvAnomalyCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#DC2626"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pending Syncs &amp; Purges" android:textColor="#94A3B8" android:textSize="10sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EXECUTIVE QUICK ACTIONS"
+                android:textSize="11sp"
+                android:textColor="#64748B"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"
+                android:layout_marginBottom="12dp" />
+
+            <LinearLayout
+                android:id="@+id/btnActionStaffIam"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:background="@drawable/bg_card_white"
+                android:elevation="2dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginBottom="12dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Staff IAM &amp; Security Codes" android:textSize="14sp" android:textStyle="bold" android:textColor="#0F172A" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Generate registration tokens &amp; manage kill switches" android:textSize="11sp" android:textColor="#64748B" />
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="→" android:textSize="18sp" android:textStyle="bold" android:textColor="#64748B" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnActionDataHygiene"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:background="@drawable/bg_card_white"
+                android:elevation="2dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginBottom="12dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Database Quality &amp; Hygiene" android:textSize="14sp" android:textStyle="bold" android:textColor="#0F172A" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Purge rejected slips &amp; archive terminated leases" android:textSize="11sp" android:textColor="#64748B" />
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="→" android:textSize="18sp" android:textStyle="bold" android:textColor="#64748B" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:elevation="16dp"
+        app:itemIconTint="@color/selector_bottom_nav"
+        app:itemTextColor="@color/selector_bottom_nav"
+        app:menu="@menu/admin_bottom_nav_menu"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

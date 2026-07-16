@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_sheet_light_grey">
+
+    <LinearLayout
+        android:id="@+id/headerSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0F172A"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="36dp"
+        android:paddingBottom="45dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="La Maison"
+                android:fontFamily="@font/parisienne"
+                android:textSize="28sp"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/btnSignOutTop"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="SIGN OUT"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/bg_btn_signout"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manager Portal"
+            android:fontFamily="@font/playfair_display"
+            android:textSize="11sp"
+            android:textColor="#94A3B8"
+            android:textStyle="bold"
+            android:letterSpacing="0.1" />
+
+        <TextView
+            android:id="@+id/tvWelcomeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/playfair_display"
+            android:text="Welcome, Loading..."
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="2dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:clipToPadding="false"
+        android:layout_marginTop="-30dp"
+        app:layout_constraintTop_toBottomOf="@id/headerSection"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation_manager">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+            <LinearLayout
+                android:id="@+id/sheetSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_sheet_light_grey"
+                android:orientation="vertical"
+                android:paddingHorizontal="24dp"
+                android:paddingTop="54dp"
+                android:paddingBottom="32dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SUPERVISORY CONTROLS"
+                    android:textSize="11sp"
+                    android:textColor="#64748B"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.05"
+                    android:layout_marginBottom="12dp" />
+
+                <LinearLayout
+                    android:id="@+id/btnActionRentRoll"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/bg_card_white"
+                    android:elevation="1.5dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginBottom="12dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Master Rent Roll Directory"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#0F172A" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="→"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#64748B" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnActionPaymentQueue"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/bg_card_white"
+                    android:elevation="1.5dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginBottom="12dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Payment Verification Queue"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#0F172A" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="→"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#64748B" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnActionMaintenanceLog"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/bg_card_white"
+                    android:elevation="1.5dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginBottom="12dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Global Maintenance Log"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#0F172A" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="→"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#64748B" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnActionReportUnits"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/bg_card_white"
+                    android:elevation="1.5dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginBottom="12dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Report Managed Apartments"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#0F172A" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="→"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#64748B" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnActionReportLeases"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/bg_card_white"
+                    android:elevation="1.5dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginBottom="12dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Report Lease Starts &amp; Changes"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#0F172A" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="→"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#64748B" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tvNextBatchDueDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Next Penalty Batch Due: Calculating..."
+                    android:textSize="12sp"
+                    android:textColor="#64748B"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:layout_marginBottom="8dp" />
+                <Button
+                    android:id="@+id/btnProcessPenalties"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:text="⚠️  Process Monthly Late Fee Penalties"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    app:backgroundTint="#DC2626"
+                    app:cornerRadius="14dp"
+                    android:elevation="4dp"
+                    android:layout_marginBottom="16dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/floatingCardsRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="24dp"
+                android:clipToPadding="false"
+                android:clipChildren="false"
+                app:layout_constraintTop_toTopOf="@id/sheetSection"
+                app:layout_constraintBottom_toTopOf="@id/sheetSection">
+
+                <LinearLayout
+                    android:id="@+id/cardSlipsQueued"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card_white"
+                    android:elevation="3dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:paddingVertical="18dp"
+                    android:layout_marginEnd="8dp">
+
+                    <TextView
+                        android:id="@+id/tvSlipsCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        android:textColor="#0F172A" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SLIPS QUEUED"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:textColor="#64748B"
+                        android:layout_marginTop="2dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cardOpenIssues"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card_white"
+                    android:backgroundTint="#FFF5F5"
+                    android:elevation="3dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:paddingVertical="18dp"
+                    android:layout_marginStart="8dp">
+
+                    <TextView
+                        android:id="@+id/tvIssuesCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        android:textColor="#DC2626" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="OPEN ISSUES"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:textColor="#DC2626"
+                        android:layout_marginTop="2dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_manager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:elevation="16dp"
+        app:menu="@menu/manager_bottom_nav_menu"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

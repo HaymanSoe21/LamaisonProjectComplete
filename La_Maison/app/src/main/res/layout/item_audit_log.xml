@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card_white"
+    android:elevation="2dp"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_marginBottom="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/tvAuditLogId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOG_8A3F9C"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:textColor="#64748B"
+            android:background="#F1F5F9"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="2dp" />
+
+        <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tvAuditTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jul 09, 2026 • 14:30"
+            android:textSize="11sp"
+            android:textColor="#94A3B8" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvActionTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Action: PUBLISHED NEW SUITE"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#0F172A" />
+
+        <TextView
+            android:id="@+id/tvAuditRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• PROPERTY MANAGER"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llReceiptDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="12dp"
+        android:background="#F8FAFC"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tvDetailedData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#334155"
+            android:lineSpacingExtra="6dp" />
+    </LinearLayout>
+
+</LinearLayout>

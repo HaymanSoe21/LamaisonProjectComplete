@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_input_rounded"
+    android:padding="16dp"
+    android:layout_marginBottom="16dp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+        <TextView android:id="@+id/tvAuditNameSuite" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Loading..." android:textColor="#0F172A" android:textStyle="bold" android:textSize="16sp"/>
+        <TextView android:id="@+id/tvAuditAmount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$0.00" android:textColor="#0F172A" android:textStyle="bold" android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+        <TextView android:id="@+id/tvAuditBank" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Bank Name\nLoading..." android:textColor="#475569" android:textSize="12sp"/>
+        <TextView android:id="@+id/tvAuditDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Transfer Date\nLoading..." android:textColor="#475569" android:textSize="12sp" android:gravity="end"/>
+    </LinearLayout>
+
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E2E8F0" android:layout_marginBottom="12dp"/>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+        <TextView android:id="@+id/tvAuditRef" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Ref: Loading..." android:textColor="#64748B" android:textSize="12sp"/>
+        <TextView android:id="@+id/tvAuditStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="VERIFIED" android:textColor="#16A34A" android:textStyle="bold" android:textSize="10sp" android:background="#DCFCE7" android:paddingHorizontal="8dp" android:paddingVertical="4dp"/>
+    </LinearLayout>
+</LinearLayout>

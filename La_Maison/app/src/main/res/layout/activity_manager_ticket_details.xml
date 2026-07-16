@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0F172A">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+        <ImageView
+            android:id="@+id/btnBackDetails"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_chevron_left"
+            android:background="@drawable/bg_input_rounded"
+            android:backgroundTint="#1E293B"
+            android:padding="6dp"
+            android:clickable="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Maintenance Details"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_sheet_light_grey"
+        android:padding="20dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView android:id="@+id/ivDetailPhoto" android:layout_width="match_parent" android:layout_height="200dp" android:scaleType="centerCrop" android:background="#E2E8F0" android:layout_marginBottom="16dp" android:visibility="gone"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DESCRIPTION" android:textColor="#64748B" android:textSize="12sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/tvDetailDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#0F172A" android:textSize="14sp" android:layout_marginTop="8dp" android:layout_marginBottom="24dp" android:background="@drawable/bg_card_white" android:padding="16dp"/>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="16dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ticket ID" android:textColor="#64748B" android:textSize="11sp"/>
+                    <TextView android:id="@+id/tvDetailTicketId" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#0F172A" android:textStyle="bold" android:textSize="13sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tenant" android:textColor="#64748B" android:textSize="11sp"/>
+                    <TextView android:id="@+id/tvDetailTenant" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#0F172A" android:textStyle="bold" android:textSize="13sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="16dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Unit ID" android:textColor="#64748B" android:textSize="11sp"/>
+                    <TextView android:id="@+id/tvDetailUnitId" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#0F172A" android:textStyle="bold" android:textSize="13sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Category" android:textColor="#64748B" android:textSize="11sp"/>
+                    <TextView android:id="@+id/tvDetailCategory" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#0F172A" android:textStyle="bold" android:textSize="13sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="32dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Submission Date" android:textColor="#64748B" android:textSize="11sp"/>
+                    <TextView android:id="@+id/tvDetailDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#0F172A" android:textStyle="bold" android:textSize="13sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Status" android:textColor="#64748B" android:textSize="11sp"/>
+                    <TextView android:id="@+id/tvDetailStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#DC2626" android:textStyle="bold" android:textSize="13sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutActionButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button android:id="@+id/btnUpdateProgress" android:layout_width="0dp" android:layout_weight="1" android:layout_height="48dp" android:text="Update to In-Progress" android:backgroundTint="#2563EB" android:textColor="#FFFFFF" android:textSize="11sp" android:layout_marginEnd="8dp"/>
+                <Button android:id="@+id/btnMarkResolved" android:layout_width="0dp" android:layout_weight="1" android:layout_height="48dp" android:text="Mark as Resolved" android:backgroundTint="#FFFFFF" android:textColor="#0F172A" android:textSize="11sp" android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

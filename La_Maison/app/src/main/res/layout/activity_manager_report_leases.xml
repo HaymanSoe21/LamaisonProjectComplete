@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F172A"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:layout_marginTop="15dp">
+
+            <ImageView
+                android:id="@+id/btnBackArrow"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_chevron_left"
+                android:paddingVertical="8dp"
+                android:paddingHorizontal="5dp"
+                android:background="@drawable/bg_input_rounded"
+                android:backgroundTint="#1E293B"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="La Maison"
+                android:fontFamily="@font/parisienne"
+                android:textSize="26sp"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LEASE ORCHESTRATION &amp; BINDING"
+            android:fontFamily="@font/playfair_display"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="#38BDF8"
+            android:letterSpacing="0.15"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:id="@+id/tvHeaderTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit Lease Packet"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_sheet_light_grey"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:id="@+id/viewLeaseForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_card_white"
+                    android:elevation="2dp"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:layout_marginBottom="24dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CONTRACT PARAMETERS"
+                        android:textSize="11sp"
+                        android:textColor="#334155"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/bg_input_rounded"
+                        android:backgroundTint="#F8FAFC"
+                        android:layout_marginBottom="12dp"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="16dp">
+
+                        <EditText
+                            android:id="@+id/etTenantUsername"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:hint="Tenant Username (e.g. @johndoe)"
+                            android:textColorHint="#94A3B8"
+                            android:textColor="#0F172A"
+                            android:textSize="14sp"
+                            android:background="@null" />
+
+                        <TextView
+                            android:id="@+id/btnVerifyUser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="VERIFY"
+                            android:textColor="#2563EB"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:clickable="true"
+                            android:focusable="true" />
+                    </LinearLayout>
+
+                    <Spinner
+                        android:id="@+id/spinnerAction"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/bg_input_rounded"
+                        android:backgroundTint="#F8FAFC"
+                        android:paddingHorizontal="12dp"
+                        android:layout_marginBottom="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="12dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1.2"
+                            android:orientation="horizontal"
+                            android:background="@drawable/bg_input_rounded"
+                            android:backgroundTint="#F8FAFC"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="16dp"
+                            android:layout_marginEnd="6dp">
+
+                            <EditText
+                                android:id="@+id/etUnitCode"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:hint="Unit Code"
+                                android:textColorHint="#94A3B8"
+                                android:textColor="#0F172A"
+                                android:textSize="14sp"
+                                android:background="@null" />
+
+                            <TextView
+                                android:id="@+id/btnVerifyUnitCode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="VERIFY"
+                                android:textColor="#2563EB"
+                                android:textStyle="bold"
+                                android:textSize="12sp"
+                                android:clickable="true"
+                                android:focusable="true" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/etMonthlyRent"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:hint="Monthly Rent ($)"
+                            android:inputType="number"
+                            android:textColorHint="#94A3B8"
+                            android:textColor="#0F172A"
+                            android:textSize="14sp"
+                            android:background="@drawable/bg_input_rounded"
+                            android:backgroundTint="#F8FAFC"
+                            android:paddingHorizontal="16dp"
+                            android:layout_marginStart="6dp" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/etSecurityDeposit"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Security Deposit ($)"
+                        android:inputType="number"
+                        android:textColorHint="#94A3B8"
+                        android:textColor="#0F172A"
+                        android:textSize="14sp"
+                        android:background="@drawable/bg_input_rounded"
+                        android:backgroundTint="#F8FAFC"
+                        android:paddingHorizontal="16dp"
+                        android:layout_marginBottom="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp">
+
+                        <EditText
+                            android:id="@+id/etStartDate"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:hint="Start Date (1st) 📅"
+                            android:textColorHint="#94A3B8"
+                            android:textColor="#0F172A"
+                            android:textSize="14sp"
+                            android:background="@drawable/bg_input_rounded"
+                            android:backgroundTint="#F8FAFC"
+                            android:paddingHorizontal="16dp"
+                            android:focusable="false"
+                            android:clickable="true"
+                            android:cursorVisible="false"
+                            android:layout_marginEnd="6dp" />
+
+                        <Spinner
+                            android:id="@+id/spinnerDuration"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_input_rounded"
+                            android:backgroundTint="#F8FAFC"
+                            android:paddingHorizontal="12dp"
+                            android:layout_marginStart="6dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Upload Document Proof"
+                        android:textColor="#334155"
+                        android:textStyle="bold"
+                        android:textSize="11sp"
+                        android:layout_marginBottom="6dp"/>
+
+                    <TextView
+                        android:id="@+id/btnUploadContractDoc"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/bg_input_rounded"
+                        android:backgroundTint="#F1F5F9"
+                        android:text="Tap to Upload Image 📸"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textColor="#3B82F6"
+                        android:clickable="true"
+                        android:focusable="true" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnSubmitLeasePacket"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:text="Execute Lease Action"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    app:backgroundTint="#0F172A"
+                    app:cornerRadius="12dp"
+                    android:layout_marginBottom="12dp" />
+                <TextView
+                    android:id="@+id/btnClearForm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Clear Form"
+                    android:gravity="center"
+                    android:textColor="#64748B"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="12dp"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/viewExecutedLeases"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BOUND LEASE AGREEMENTS (RECENT FIRST)"
+                    android:textSize="11sp"
+                    android:textColor="#64748B"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <LinearLayout
+                    android:id="@+id/executedLeasesContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavLeases"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:elevation="16dp"
+        app:itemIconTint="@color/selector_bottom_nav"
+        app:itemTextColor="@color/selector_bottom_nav"
+        app:menu="@menu/menu_report_leases_nav" />
+
+</LinearLayout>

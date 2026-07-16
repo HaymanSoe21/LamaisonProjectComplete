@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="nrc_regions">
+        <item>1/</item>
+        <item>2/</item>
+        <item>3/</item>
+        <item>4/</item>
+        <item>5/</item>
+        <item>6/</item>
+        <item>7/</item>
+        <item>8/</item>
+        <item>9/</item>
+        <item>10/</item>
+        <item>11/</item>
+        <item>12/</item>
+        <item>13/</item>
+        <item>14/</item>
+    </string-array>
+
+    <string-array name="nrc_townships_region_1">
+        <item>BAMANA</item>
+        <item>KHAHPANA</item>
+        <item>DAPHAYA</item>
+
+        <item>HAPANA</item>
+        <item>HPAKANA</item>
+
+        <item>AHGAYA</item>
+        <item>KAMATA</item>
+        <item>KAPATA</item>
+        <item>KHALAHPA</item>
+        <item>LAGANA</item>
+        <item>MAKHABA</item>
+        <item>MASANA</item>
+
+        <item>MAKATA</item>
+        <item>MANYANA</item>
+
+        <item>MALANA</item>
+        <item>NAMANA</item>
+        <item>PAWANA</item>
+        <item>PANADA</item>
+        <item>PATAAH</item>
+        <item>SADANA</item>
+        <item>YABAYA</item>
+
+        <item>YAKANA</item>
+        <item>SABANA</item>
+
+        <item>SAPAYA</item>
+        <item>TANANA</item>
+        <item>TASALA</item>
+        <item>WAMANA</item>
+    </string-array>
+
+    <string-array name="nrc_townships_region_2">
+        <item>BALAKHA</item>
+        <item>DAMASA</item>
+        <item>HPASANA</item>
+        <item>HPAYASA</item>
+        <item>LAKANA</item>
+        <item>MASANA</item>
+
+        <item>YATANA</item>
+        <item>YATHANA</item>
+
+    </string-array>
+
+    <string-array name="nrc_townships_region_3">
+
+        <item>BAGALA</item>
+        <item>LABANA</item>
+        <item>BAAHNA</item>
+        <item>HPAPANA</item>
+        <item>BATHASA</item>
+        <item>KAMAMA</item>
+        <item>KAKAYA</item>
+
+        <item>KADANA</item>
+        <item>KASAKA</item>
+
+        <item>KADATA</item>
+        <item>LATHANA</item>
+
+        <item>MAWATA</item>
+        <item>PAKANA</item>
+        <item>YAYATHA</item>
+        <item>SAKALA</item>
+        <item>THATANA</item>
+        <item>THATAKA</item>
+        <item>WALAMA</item>
+
+    </string-array>
+
+    <string-array name="nrc_townships_region_4">
+
+        <item>KAKHANA</item>
+        <item>HPALANA</item>
+        <item>HAKHANA</item>
+
+        <item>KAPALA</item>
+        <item>MATAPA</item>
+        <item>MATANA</item>
+        <item>PALAWA</item>
+        <item>YAZANA</item>
+        <item>YAKHADA</item>
+        <item>SAMANA</item>
+
+        <item>TATANA</item>
+        <item>HTATALA</item>
+
+        <item>TAZANA</item>
+
+    </string-array>
+
+    <string-array name="nrc_townships_region_5">
+
+        <item>AHYATA</item>
+        <item>BAMANA</item>
+        <item>BATALA</item>
+        <item>KHAOUTA</item>
+        <item>KHATANA</item>
+
+        <item>HAMALA</item>
+        <item>AHTANA</item>
+
+        <item>KALAHTA</item>
+        <item>KALAWA</item>
+
+        <item>KABALA</item>
+        <item>KANANA</item>
+        <item>KATHANA</item>
+        <item>KALATA</item>
+        <item>KHAOUNA</item>
+        <item>KALANA</item>
+        <item>LAHANA</item>
+
+        <item>LAYANA</item>
+        <item>MALANA</item>
+
+        <item>MAKANA</item>
+        <item>MAYANA</item>
+
+        <item>MAMANA</item>
+        <item>MAMATA</item>
+        <item>NAYANA</item>
+        <item>NGAZANA</item>
+        <item>PALANA</item>
+        <item>HPAPANA</item>
+        <item>PALABA</item>
+
+        <item>SAKANA</item>
+        <item>SALAKA</item>
+
+        <item>YABANA</item>
+        <item>DAPAYA</item>
+        <item>TAMANA</item>
+        <item>TASANA</item>
+        <item>HTAKHANA</item>
+        <item>WALANA</item>
+        <item>WATHANA</item>
+
+        <item>YAOUNA</item>
+        <item>YAMAPA</item>
+
+        <item>KAMANA</item>
+        <item>KHAPANA</item>
+
+    </string-array>
+
+    <string-array name="nrc_townships_region_6">
+
+        <item>BAPANA</item>
+        <item>HTAWANA</item>
+        <item>KALAAH</item>
+        <item>KATHANA</item>
+        <item>KASANA</item>
+        <item>LALANA</item>
+
+        <item>MAMANA</item>
+        <item>PALANA</item>
+
+        <item>TATHAYA</item>
+        <item>THAYAKHA</item>
+
+        <item>YAHPANA</item>
+        <item>KHAMANA</item>
+        <item>MATANA</item>
+        <item>PALATA</item>
+        <item>KAYAYA</item>
+
+    </string-array>
+
+    <string-array name="nrc_townships_region_7">
+
+        <item>DAOUNA</item>
+        <item>KAPAKA</item>
+        <item>KAWANA</item>
+        <item>KAKANA</item>
+        <item>KATAKHA</item>
+        <item>LAPATA</item>
+
+        <item>MALANA</item>
+        <item>MANYANA</item>
+
+        <item>NATALA</item>
+        <item>NYALAPA</item>
+
+        <item>AHHPANA</item>
+        <item>AHTANA</item>
+        <item>PATANA</item>
+        <item>PAKHATA</item>
+        <item>PAKHANA</item>
+        <item>PATATA</item>
+
+        <item>PANAKA</item>
+        <item>HPAMANA</item>
+
+        <item>PAMANA</item>
+        <item>YATANA</item>
+
+        <item>YAKANA</item>
+        <item>HTATAPA</item>
+        <item>TANGANA</item>
+        <item>THANAPA</item>
+        <item>THAWATA</item>
+        <item>THAKANA</item>
+        <item>THASANA</item>
+        <item>WAMANA</item>
+        <item>YATAYA</item>
+        <item>ZAKANA</item>
+        <item>PATASA</item>
+
+    </string-array>
+
+    <string-array name="nrc_townships_region_8">
+
+        <item>AHLANA</item>
+        <item>KHAMANA</item>
+        <item>GAGANA</item>
+        <item>KAMANA</item>
+        <item>MAKANA</item>
+        <item>MABANA</item>
+        <item>MATANA</item>
+        <item>MALANA</item>
+
+        <item>MAMANA</item>
+        <item>MAHTANA</item>
+
+        <item>MATHANA</item>
+        <item>NAMANA</item>
+        <item>NGAHPANA</item>
+        <item>PAKHAKA</item>
+        <item>PAMANA</item>
+        <item>PAPHANA</item>
+
+        <item>SALANA</item>
+        <item>SAMANA</item>
+
+        <item>SAHPANA</item>
+        <item>SATAYA</item>
+
+        <item>SAPAWA</item>
+        <item>TATAKA</item>
+        <item>THAYANA</item>
+        <item>HTALANA</item>
+        <item>YANAKHA</item>
+        <item>YASAKA</item>
+        <item>KAHTANA</item>
+
+    </string-array>
+
+    <string-array name="nrc_townships_region_9">
+
+        <item>AHMAYA</item>
+        <item>AHMAZA</item>
+        <item>KHAAHZA</item>
+        <item>KHAMASA</item>
+        <item>KAPATA</item>
+
+        <item>KASANA</item>
+        <item>MATAYA</item>
+        <item>MAHAMA</item>
+        <item>MALANA</item>
+        <item>MAHTALA</item>
+
+        <item>MAKANA</item>
+        <item>MAKHANA</item>
+        <item>MATHANA</item>
+        <item>NAHTAKA</item>
+        <item>NGATHAYA</item>
+
+        <item>NGAZANA</item>
+        <item>NYAOUNA</item>
+        <item>PATHAKA</item>
+        <item>PABANA</item>
+        <item>PAKAKHA</item>
+
+        <item>PAOULA</item>
+        <item>SAKANA</item>
+        <item>SAKATA</item>
+        <item>THAPAKA</item>
+        <item>TATAOU</item>
+
+        <item>TATHANA</item>
+        <item>THASANA</item>
+        <item>WATANA</item>
+        <item>YAMATHA</item>
+        <item>TAKATA</item>
+
+        <item>MAMANA</item>
+        <item>DAKHATHA</item>
+        <item>LAWANA</item>
+        <item>OUTATHA</item>
+        <item>PABATHA</item>
+
+        <item>PAMANA</item>
+        <item>TAKANA</item>
+        <item>ZABATHA</item>
+        <item>ZAYATHA</item>
+
+
+    </string-array>
+
+    <string-array name="nrc_townships_region_10">
+
+        <item>BALANA</item>
+        <item>KHASANA</item>
+        <item>KHAZANA</item>
+        <item>KAMAYA</item>
+        <item>KAHTANA</item>
+
+        <item>LAMANA</item>
+        <item>MALAMA</item>
+        <item>MADANA</item>
+        <item>PAMANA</item>
+        <item>THAHPAYA</item>
+
+        <item>THAHTANA</item>
+        <item>YAMANA</item>
+
+
+    </string-array>
+
+    <string-array name="nrc_townships_region_11">
+
+        <item>AHMANA</item>
+        <item>BATHATA</item>
+        <item>GAMANA</item>
+        <item>KAHPANA</item>
+        <item>KATANA</item>
+
+        <item>MAAHTA</item>
+        <item>MATANA</item>
+        <item>MAPANA</item>
+        <item>MAAHNA</item>
+        <item>MAOUNA</item>
+
+        <item>MAPATA</item>
+        <item>PATANA</item>
+        <item>PANATA</item>
+        <item>YABANA</item>
+        <item>YATHATA</item>
+
+        <item>SATANA</item>
+        <item>THATANA</item>
+        <item>TAKANA</item>
+        <item>KATALA</item>
+        <item>TAPAWA</item>
+
+    </string-array>
+
+    <string-array name="nrc_townships_region_12">
+
+        <item>AHLANA</item>
+        <item>BAHANA</item>
+        <item>BATAHTA</item>
+        <item>KAKAKA</item>
+        <item>DAGAYA</item>
+
+        <item>DAGAMA</item>
+        <item>DAGASA</item>
+        <item>DAGATA</item>
+        <item>DAGANA</item>
+        <item>DALANA</item>
+
+        <item>DAPANA</item>
+        <item>LATHAYA</item>
+        <item>LAMANA</item>
+        <item>LAKANA</item>
+        <item>MABANA</item>
+
+        <item>HTATAPA</item>
+        <item>AHSANA</item>
+        <item>KAMAYA</item>
+        <item>KAMANA</item>
+        <item>KHAYANA</item>
+
+        <item>KAKHAKA</item>
+        <item>KATATA</item>
+        <item>KATANA</item>
+        <item>KAMATA</item>
+        <item>LAMATA</item>
+
+        <item>LATHANA</item>
+        <item>MAYAKA</item>
+        <item>MAGADA</item>
+        <item>MAGATA</item>
+        <item>OUKAMA</item>
+
+        <item>PABATA</item>
+        <item>PAZATA</item>
+        <item>SAKHANA</item>
+        <item>SAKAKHA</item>
+        <item>SAKANA</item>
+
+        <item>YAPATHA</item>
+        <item>OUKATA</item>
+        <item>TATAHTA</item>
+        <item>TAKANA</item>
+        <item>TAMANA</item>
+
+        <item>THAKATA</item>
+        <item>THALANA</item>
+        <item>THAGAKA</item>
+        <item>THAKHANA</item>
+        <item>TATANA</item>
+
+        <item>YAKANA</item>
+        <item>OUKANA</item>
+
+
+    </string-array>
+
+    <string-array name="nrc_townships_region_13">
+
+        <item>AHKHANA</item>
+        <item>KHAYAHA</item>
+        <item>KHAMANA</item>
+        <item>HATANA</item>
+        <item>HAPANA</item>
+
+        <item>HAPATA</item>
+        <item>SAHPANA</item>
+        <item>THANANA</item>
+        <item>SASANA</item>
+        <item>THAPANA</item>
+
+        <item>KALAHPA</item>
+        <item>KALANA</item>
+        <item>KALADA</item>
+        <item>KAMASA</item>
+        <item>KATANA</item>
+
+        <item>KAYANA</item>
+        <item>KATATA</item>
+        <item>KAHANA</item>
+        <item>KALATA</item>
+        <item>KAKHANA</item>
+
+        <item>KAMANA</item>
+        <item>KATALA</item>
+        <item>KATHANA</item>
+        <item>LAKHANA</item>
+        <item>LAKHATA</item>
+
+        <item>LAYANA</item>
+        <item>LAKANA</item>
+        <item>LAHANA</item>
+        <item>LALANA</item>
+        <item>MABANA</item>
+
+        <item>MAMASA</item>
+        <item>MATANA</item>
+        <item>MATATA</item>
+        <item>MAMANA</item>
+
+
+        <item>MAHPANA</item>
+        <item>MAKANA</item>
+        <item>MAPANA</item>
+        <item>MASANA</item>
+
+
+        <item>MAYANA</item>
+        <item>MAKANA</item>
+        <item>MAKHANA</item>
+        <item>MALANA</item>
+        <item>MAMATA</item>
+
+        <item>MANANA</item>
+        <item>MAPANA</item>
+        <item>MATANA</item>
+        <item>MAYATA</item>
+
+
+        <item>MAYANA</item>
+        <item>MASATA</item>
+        <item>NAKHAWA</item>
+        <item>NATANA</item>
+
+
+        <item>NAKHANA</item>
+        <item>NAMATA</item>
+        <item>NAHPANA</item>
+        <item>NASANA</item>
+        <item>NAKANA</item>
+
+        <item>NAWANA</item>
+        <item>NAPHANA</item>
+        <item>NAKHANA</item>
+        <item>NAKHATA</item>
+        <item>NYAYANA</item>
+
+        <item>PAKHANA</item>
+        <item>PAYANA</item>
+        <item>PASANA</item>
+        <item>PAWANA</item>
+        <item>HPAKHANA</item>
+
+        <item>PATAYA</item>
+        <item>PALANA</item>
+        <item>TAKHALA</item>
+        <item>TAYANA</item>
+        <item>TAKANA</item>
+
+        <item>YALANA</item>
+        <item>YASANA</item>
+        <item>YAHPANA</item>
+        <item>YANGANA</item>
+        <item>NATAYA</item>
+
+        <item>PALATA</item>
+        <item>KHALANA</item>
+        <item>MAHAYA</item>
+        <item>PAPAKA</item>
+        <item>TAMANYA</item>
+
+        <item>MABATA</item>
+        <item>MANGANA</item>
+        <item>AHTANA</item>
+        <item>TALANA</item>
+
+
+
+    </string-array>
+
+    <string-array name="nrc_townships_region_14">
+
+        <item>AHMATA</item>
+        <item>BAKALA</item>
+        <item>DANAHPA</item>
+
+        <item>DADAYA</item>
+        <item>AHMANA</item>
+        <item>HAKAKA</item>
+        <item>HATHATA</item>
+        <item>AHGAPA</item>
+        <item>KAKAHTA</item>
+        <item>KALANA</item>
+
+        <item>KAKHANA</item>
+        <item>KAKANA</item>
+
+        <item>KAPANA</item>
+        <item>LAPATA</item>
+        <item>LAMANA</item>
+        <item>MAAHPA</item>
+        <item>MAMAKA</item>
+        <item>MAAHNA</item>
+        <item>MAMANA</item>
+
+        <item>NGAPATA</item>
+        <item>NGATHAKHA</item>
+
+        <item>NGAYAKA</item>
+        <item>NGASANA</item>
+
+        <item>NGATHAYA</item>
+        <item>NYATANA</item>
+        <item>PATANA</item>
+        <item>PATHANA</item>
+        <item>HPAPANA</item>
+        <item>PASALA</item>
+        <item>YATHAYA</item>
+
+        <item>THAPANA</item>
+        <item>WAKHAMA</item>
+
+        <item>YAKANA</item>
+        <item>ZALANA</item>
+
+    </string-array>
+
+
+    <string-array name="nrc_types">
+        <item>(N)</item>
+        <item>(E)</item>
+        <item>(P)</item>
+        <item>(T)</item>
+        <item>(C)</item>
+        <item>(S)</item>
+    </string-array>
+</resources>

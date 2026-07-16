@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://tools.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F172A"
+    android:orientation="vertical"
+    tools:context=".ui.MaintenanceHubActivity">
+
+    <!-- STICKY NAVY HEADER + TABS -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:elevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:layout_marginTop="15dp">
+
+            <ImageView
+                android:id="@+id/btnBackHub"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_chevron_left"
+                android:paddingVertical="8dp"
+                android:paddingHorizontal="5dp"
+                android:background="@drawable/bg_input_rounded"
+                android:backgroundTint="#1E293B"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="La Maison"
+                android:fontFamily="@font/parisienne"
+                android:textSize="26sp"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TENANT DASHBOARD"
+            android:fontFamily="@font/playfair_display"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="#38BDF8"
+            android:letterSpacing="0.15"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Maintenance Hub"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayoutMaintenance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#0F172A"
+            app:tabGravity="fill"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="#FFFFFF"
+            app:tabTextColor="#64748B"
+            app:tabIndicatorColor="#38BDF8"
+            app:tabIndicatorHeight="3dp"
+            app:tabTextAppearance="@android:style/TextAppearance.Small">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Active" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="History" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Ticket +" />
+        </com.google.android.material.tabs.TabLayout>
+    </LinearLayout>
+
+    <!-- LIGHT GREY WORKSPACE -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@drawable/bg_sheet_light_grey">
+
+        <!-- DYNAMIC FILTER CONTAINER (Hidden by default, shown in History tab) -->
+        <LinearLayout
+            android:id="@+id/llFilterContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="8dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvHistoryTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PAST REQUESTS"
+                android:textSize="11sp"
+                android:textColor="#64748B"
+                android:textStyle="bold"
+                android:letterSpacing="0.05" />
+
+            <TextView
+                android:id="@+id/btnFilterHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="FILTER"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/bg_btn_signout"
+                android:backgroundTint="#0F172A"
+                android:gravity="center"
+                android:paddingHorizontal="12dp"
+                android:drawableStart="@android:drawable/ic_menu_today"
+                android:drawablePadding="6dp"
+                android:drawableTint="#FFFFFF"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMaintenanceTickets"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:padding="16dp"
+                tools:listitem="@layout/item_maintenance_ticket" />
+
+            <LinearLayout
+                android:id="@+id/llEmptyHistoryState"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="32dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@android:drawable/ic_menu_agenda"
+                    app:tint="#CBD5E1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No Historical Data Found"
+                    android:textColor="#334155"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:layout_marginTop="16dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Completed past maintenance tickets will automatically archive here."
+                    android:textColor="#94A3B8"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_marginTop="6dp"/>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

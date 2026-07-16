@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F172A"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:layout_marginTop="15dp">
+
+            <ImageView
+                android:id="@+id/btnBackArrow"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_chevron_left"
+                android:paddingVertical="8dp"
+                android:paddingHorizontal="5dp"
+                android:background="@drawable/bg_input_rounded"
+                android:backgroundTint="#1E293B"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="La Maison"
+                android:fontFamily="@font/parisienne"
+                android:textSize="26sp"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TENANT PORTAL"
+            android:fontFamily="@font/playfair_display"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="#38BDF8"
+            android:letterSpacing="0.15"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload Payment Remittance"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_sheet_light_grey"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="REMITTANCE DETAILS (ALL FIELDS REQUIRED)"
+                android:textSize="11sp"
+                android:textColor="#64748B"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_white"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:layout_marginBottom="14dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Payment Category / Purpose" android:textColor="#64748B" android:textSize="11sp"/>
+                <Spinner
+                    android:id="@+id/spinnerPaymentCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="15dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card_white"
+                    android:elevation="2dp"
+                    android:orientation="vertical"
+                    android:padding="14dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginEnd="6dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Amount Paid ($)" android:textColor="#64748B" android:textSize="11sp"/>
+                    <EditText
+                        android:id="@+id/etAmountPaid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="1500"
+                        android:inputType="number"
+                        android:textColor="#0F172A"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:background="@null"
+                        android:paddingTop="4dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.1"
+                    android:background="@drawable/bg_card_white"
+                    android:elevation="2dp"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginStart="6dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bank Name" android:textColor="#64748B" android:textSize="11sp"/>
+                    <Spinner
+                        android:id="@+id/spinnerBankName"
+                        android:layout_width="match_parent"
+                        android:layout_height="28dp"
+                        android:layout_marginTop="2dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_white"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="14dp"
+                android:layout_marginBottom="15dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bank Account Number" android:textColor="#64748B" android:textSize="11sp"/>
+                <EditText
+                    android:id="@+id/etBankAccountNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="e.g., 00123456789"
+                    android:textColor="#0F172A"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:background="@null"
+                    android:paddingTop="4dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="14dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:background="@drawable/bg_card_white"
+                    android:elevation="2dp"
+                    android:orientation="vertical"
+                    android:padding="14dp"
+                    android:layout_marginEnd="6dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bank Branch / Location" android:textColor="#64748B" android:textSize="11sp"/>
+                    <EditText
+                        android:id="@+id/etBankAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Mandalay 78th St"
+                        android:textColor="#0F172A"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:background="@null"
+                        android:paddingTop="4dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card_white"
+                    android:elevation="2dp"
+                    android:orientation="vertical"
+                    android:padding="14dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginBottom="2dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Transfer Date" android:textColor="#64748B" android:textSize="11sp"/>
+                    <EditText
+                        android:id="@+id/etTransferDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Tap to Pick"
+                        android:textColor="#0F172A"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:background="@null"
+                        android:paddingTop="4dp"
+                        android:focusable="false"
+                        android:clickable="true" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_white"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="14dp"
+                android:layout_marginBottom="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Personal Context / Notes" android:textColor="#64748B" android:textSize="11sp"/>
+                <EditText
+                    android:id="@+id/etNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:hint="e.g., Monthly rent fee for July"
+                    android:textColor="#0F172A"
+                    android:textSize="14sp"
+                    android:background="@null"
+                    android:gravity="top|start"
+                    android:inputType="textMultiLine"
+                    android:paddingTop="4dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnUploadSlip"
+                android:layout_width="match_parent"
+                android:layout_height="84dp"
+                android:background="@drawable/bg_card_white"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginBottom="24dp">
+                <TextView
+                    android:id="@+id/tvUploadStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tap to Attach Bank Screenshot 📸"
+                    android:textColor="#2563EB"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Required for accounting verification"
+                    android:textColor="#64748B"
+                    android:textSize="11sp"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSubmitPayment"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:text="Submit Payment Slip"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                app:backgroundTint="#0F172A"
+                app:cornerRadius="14dp"
+                android:elevation="4dp"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Cancel &amp; Return"
+                android:textColor="#64748B"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

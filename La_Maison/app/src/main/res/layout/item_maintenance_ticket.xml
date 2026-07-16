@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="#F8FAFC">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/cardStatusPill">
+
+            <TextView
+                android:id="@+id/tvTicketId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AMT-2026-031"
+                android:textColor="#0F172A"
+                android:textStyle="bold"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvTicketTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kitchen Sink Leakage"
+                android:textColor="#334155"
+                android:textSize="14sp"
+                android:layout_marginTop="2dp" />
+
+            <TextView
+                android:id="@+id/tvTicketDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Updated: Sep 15, 2026"
+                android:textColor="#94A3B8"
+                android:textSize="11sp"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardStatusPill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:cardCornerRadius="6dp"
+            app:cardBackgroundColor="#FEF3C7"
+            app:cardElevation="0dp">
+
+            <TextView
+                android:id="@+id/tvTicketStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="In Progress"
+                android:textColor="#D97706"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp" />
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

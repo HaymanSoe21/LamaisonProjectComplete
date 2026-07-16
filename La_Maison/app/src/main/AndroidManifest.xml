@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LaMaison"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ui.SplashActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+
+
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.LoginActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.SignupActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ManagerDashboard"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.TenantDashboard"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.AdminDashboard"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.PaymentMainManagerActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.UserProfileActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ManagerReportUnitsActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ManagerReportLeasesActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.TenantFinancialLedgerActivity" />
+        <activity android:name=".ui.TransactionDetailsActivity" />
+        <activity
+            android:name=".ui.TenantPaymentActivity"/>
+
+        <activity
+            android:name=".ui.PaymentVerificationActivity"
+            />
+        <activity
+            android:name=".ui.SlipDetailsActivity"
+            />
+
+        <activity android:name=".ui.AdminAuditLogActivity" />
+
+        <activity
+            android:name=".ui.StaffIamActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.AdminDataHygieneActivity"
+            android:exported="false"
+            />
+
+        <activity
+            android:name=".ui.MasterRentRollActivity"
+            android:exported="false"
+            />
+        <activity
+            android:name=".ui.LedgerHistoryActivity"
+            android:exported="false"
+            />
+
+        <activity
+            android:name=".ui.MaintenanceHubActivity"
+            android:exported="false"
+            />
+
+
+
+        <activity
+            android:name=".ui.RequestMaintenanceActivity"
+            android:exported="false"
+            />
+
+        <activity
+            android:name=".ui.MaintenanceDetailActivity"
+            android:exported="false"
+            />
+
+        <activity
+            android:name=".ui.ManagerMaintenanceHubActivity"
+            android:exported="false"
+            />
+        <activity
+            android:name=".ui.ManagerTicketDetailsActivity"
+            android:exported="false"
+            />
+
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+
+    </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+
+</manifest>

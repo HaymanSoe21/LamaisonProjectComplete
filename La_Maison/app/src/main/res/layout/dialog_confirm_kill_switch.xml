@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card_white"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center">
+
+    <!-- Warning Icon -->
+    <TextView
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:text="⚠️"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:background="@drawable/bg_input_rounded"
+        android:backgroundTint="#FEE2E2"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Emergency Kill Switch"
+        android:fontFamily="@font/playfair_display"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#DC2626"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This will instantly revoke all unused LaMaison manager tokens. Are you absolutely sure?"
+        android:textSize="13sp"
+        android:textColor="#64748B"
+        android:gravity="center"
+        android:lineSpacingExtra="3dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Action Pill Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnDialogCancel"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="#475569"
+            app:backgroundTint="#F1F5F9"
+            app:cornerRadius="12dp"
+            android:layout_marginEnd="6dp"
+            android:elevation="0dp" />
+
+        <Button
+            android:id="@+id/btnDialogConfirm"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="Kill All Access"
+            android:textAllCaps="false"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="#DC2626"
+            app:cornerRadius="12dp"
+            android:layout_marginStart="6dp"
+            android:elevation="2dp" />
+    </LinearLayout>
+
+</LinearLayout>

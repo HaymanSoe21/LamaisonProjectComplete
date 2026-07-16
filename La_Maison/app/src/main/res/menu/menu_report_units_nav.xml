@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_propose_unit"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="Propose Suite" />
+    <item
+        android:id="@+id/nav_approved_units"
+        android:icon="@android:drawable/ic_menu_agenda"
+        android:title="Approved DB" />
+</menu>

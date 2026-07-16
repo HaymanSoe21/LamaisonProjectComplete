@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingVertical="16dp"
+        android:paddingHorizontal="4dp">
+
+        <!-- Date Column -->
+        <TextView
+            android:id="@+id/tvItemDate"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:text="JUN 01\n2026"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="#64748B"
+            android:lineSpacingExtra="2dp"
+            android:layout_marginEnd="16dp"/>
+
+        <!-- Category & Bank Ref Column -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvItemCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monthly Rent"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#0F172A"
+                android:layout_marginBottom="2dp"/>
+            <TextView
+                android:id="@+id/tvItemBankRef"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bank • Ref: #0000"
+                android:textSize="12sp"
+                android:textColor="#64748B"/>
+        </LinearLayout>
+
+        <!-- Amount & Status Badge Column -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="end">
+            <TextView
+                android:id="@+id/tvItemAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$0.00"
+                android:textSize="17sp"
+                android:fontFamily="@font/playfair_display"
+                android:textStyle="bold"
+                android:textColor="#0F172A"
+                android:layout_marginBottom="6dp"/>
+            <TextView
+                android:id="@+id/tvItemStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VERIFIED"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="#16A34A"
+                android:background="#DCFCE7"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="3dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Subtle Editorial Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F1F5F9" />
+</LinearLayout>

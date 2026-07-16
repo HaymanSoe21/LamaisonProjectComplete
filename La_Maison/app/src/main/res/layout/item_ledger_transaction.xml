@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card_white"
+    android:elevation="1.5dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="16dp"
+    android:layout_marginBottom="10dp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTxnCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monthly Rent Payment"
+            android:textColor="#0F172A"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTxnNotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&quot;Paid 5 days early for July 2026.&quot;"
+            android:textColor="#475569"
+            android:textSize="13sp"
+            android:textStyle="italic"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_marginTop="2dp" />
+
+        <TextView
+            android:id="@+id/tvTxnDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sep 01, 2026"
+            android:textColor="#94A3B8"
+            android:textSize="11sp"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="end">
+        <TextView
+            android:id="@+id/tvTxnAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-$1,500.00"
+            android:textColor="#DC2626"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace" />
+        <TextView
+            android:id="@+id/tvTxnStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paid"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="#047857"
+            android:background="#D1FAE5"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="2dp"
+            android:layout_marginTop="6dp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "950188559065",
+    "project_id": "lamaison-a5d7a",
+    "storage_bucket": "lamaison-a5d7a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950188559065:android:6e03ae69aff31b650a4cc8",
+        "android_client_info": {
+          "package_name": "com.example.lamaison"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCL8678ouN7sZmiMkfNDQXsk7WhFtkdETo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

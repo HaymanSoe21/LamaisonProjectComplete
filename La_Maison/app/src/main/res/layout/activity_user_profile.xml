@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F172A"
+    android:orientation="vertical">
+
+    <!-- ========================================================= -->
+    <!-- ZONE 1: STICKY NAVY HEADER                                -->
+    <!-- ========================================================= -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/btnBackArrow"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_chevron_left"
+                android:padding="3dp"
+                android:background="@drawable/bg_input_rounded"
+                android:backgroundTint="#1E293B"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/btnEditPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:text="EDIT PHOTO"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/bg_btn_signout"
+                android:gravity="center"
+                android:paddingHorizontal="12dp"
+                android:drawableStart="@drawable/ic_edit"
+                android:drawablePadding="6dp"
+                android:clickable="true"
+                android:focusable="true" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/ivProfilePic"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:background="@drawable/bg_input_rounded"
+                android:backgroundTint="#334155"
+                android:scaleType="centerCrop"
+                android:clipToOutline="true" />
+
+            <TextView
+                android:id="@+id/tvProfileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="JOHN DOE"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:id="@+id/tvProfileUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#38BDF8"
+                android:layout_marginTop="2dp" />
+
+            <TextView
+                android:id="@+id/tvProfileRole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TENANT"
+                android:textSize="11sp"
+                android:textColor="#94A3B8"
+                android:letterSpacing="0.1"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ========================================================= -->
+    <!-- ZONE 2: SCROLLABLE BODY                                   -->
+    <!-- ========================================================= -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_sheet_light_grey"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Section 1: Property Access (Dynamically controlled by Role!) -->
+            <TextView
+                android:id="@+id/tvSectionPropertyAccess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PROPERTY ACCESS"
+                android:textSize="11sp"
+                android:textColor="#64748B"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:id="@+id/cardPropertyAccess"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_card_white"
+                android:elevation="2dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp"
+                android:layout_marginBottom="20dp"
+                android:clickable="false"
+                android:focusable="false">
+
+                <TextView
+                    android:id="@+id/tvPropertyAccessLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Assigned Unit"
+                    android:textColor="#475569"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvProfileUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loading..."
+                    android:textColor="#0F172A"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Section 2: Account Details -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ACCOUNT DETAILS"
+                android:textSize="11sp"
+                android:textColor="#64748B"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_white"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Email" android:textColor="#475569" android:textSize="14sp"/>
+                    <TextView android:id="@+id/tvProfileEmail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="loading..." android:textColor="#0F172A" android:textStyle="bold" android:textSize="14sp"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E2E8F0" android:layout_marginBottom="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Phone" android:textColor="#475569" android:textSize="14sp"/>
+                    <TextView android:id="@+id/tvProfilePhone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="loading..." android:textColor="#0F172A" android:textStyle="bold" android:textSize="14sp"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E2E8F0" android:layout_marginBottom="12dp"/>
+
+                <LinearLayout
+                    android:id="@+id/btnChangePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Change Password" android:textColor="#475569" android:textSize="14sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Update →" android:textColor="#2563EB" android:textStyle="bold" android:textSize="14sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Section 3: Identity & Verification -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IDENTITY &amp; VERIFICATION"
+                android:textSize="11sp"
+                android:textColor="#64748B"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_white"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="32dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Nationality" android:textColor="#475569" android:textSize="14sp"/>
+                    <TextView android:id="@+id/tvProfileNationality" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Myanmar" android:textColor="#0F172A" android:textStyle="bold" android:textSize="14sp"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E2E8F0" android:layout_marginBottom="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Identity ID" android:textColor="#475569" android:textSize="14sp"/>
+                    <TextView android:id="@+id/tvProfileIdentityId" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="•••• •••• 8841" android:textColor="#0F172A" android:textStyle="bold" android:textSize="14sp"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E2E8F0" android:layout_marginBottom="12dp"/>
+
+                <LinearLayout
+                    android:id="@+id/btnViewDocument"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Identity Proof" android:textColor="#475569" android:textSize="14sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="View Document →" android:textColor="#2563EB" android:textStyle="bold" android:textSize="14sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSignOutBottom"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Sign Out"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textColor="#EF4444"
+                android:backgroundTint="#FEF2F2"
+                app:cornerRadius="12dp"
+                app:strokeColor="#FECACA"
+                app:strokeWidth="1dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F172A"
+    android:orientation="vertical">
+
+    <!-- 1. FIXED NAVY HEADER (Does not scroll) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:layout_marginTop="15dp">
+
+            <!-- Styled Chevron Back Button matching other screens -->
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_chevron_left"
+                android:paddingVertical="8dp"
+                android:paddingHorizontal="5dp"
+                android:background="@drawable/bg_input_rounded"
+                android:backgroundTint="#1E293B"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="La Maison"
+                android:fontFamily="@font/parisienne"
+                android:textSize="26sp"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+
+        <!-- Reused tvLedgerUnit to act as the blue sub-header -->
+        <TextView
+            android:id="@+id/tvLedgerUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LEDGER HISTORY"
+            android:fontFamily="@font/playfair_display"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="#38BDF8"
+            android:letterSpacing="0.15"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp" />
+
+        <!-- Reused tvLedgerTenant to act as the main white title -->
+        <TextView
+            android:id="@+id/tvLedgerTenant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tenant Name"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <!-- 2. BODY AREA (Fills remaining space, holds scrollable list) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_sheet_light_grey"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TRANSACTION HISTORY"
+            android:textSize="11sp"
+            android:textColor="#64748B"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <!-- White Card Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_card_white"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:paddingTop="8dp">
+
+            <!-- The RecyclerView itself handles the scrolling -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvLedgerHistory"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:clipToPadding="false"
+                android:overScrollMode="never" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="END OF AVAILABLE RECORDS"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="#94A3B8"
+                android:gravity="center"
+                android:paddingVertical="16dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_map_payment_manager"
+    app:startDestination="@id/nav_inbox">
+
+    <!-- CHANGED ID TO MATCH MENU -->
+    <fragment
+        android:id="@+id/nav_inbox"
+        android:name="com.example.lamaison.ui.PaymentInboxFragment"
+        android:label="fragment_payment_inbox"
+        tools:layout="@layout/fragment_payment_inbox" />
+
+    <!-- CHANGED ID TO MATCH MENU -->
+    <fragment
+        android:id="@+id/nav_audit_trail"
+        android:name="com.example.lamaison.ui.PaymentAuditTrailFragment"
+        android:label="PaymentAuditTrailFragment"
+        tools:layout="@layout/fragment_payment_audit_trail" />
+</navigation>
