@@ -18,6 +18,6 @@ Lamaison Property and Tenant Management System
 4. Click the Run (Play) button. 
 
 ## 3. Firebase Configuration
-* The Firebase `google-services.json` is already included in the Android `app` directory. 
+* The Firebase `serviceAccountKey.json` is already included in the Android `app` directory. 
 * The backend Firebase Admin SDK key is included in the Ktor resources directory. 
 *(Note: Keep this repo private since these keys are included!)*
